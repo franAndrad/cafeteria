@@ -7,11 +7,11 @@ import Error404 from './components/views/Error404';
 import Menu from './components/common/Menu'
 import Footer from './components/common/Footer'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-
+import './app.css'
 
 function App() {
   return (
-    <div className="App">
+    <div className="App body">
       <BrowserRouter>
         <Menu></Menu>
         <Routes>
