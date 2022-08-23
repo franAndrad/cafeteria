@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button, Alert } from 'react-bootstrap';
 import { cantidadCaracteres, validarCategoria, validarPrecio, validarURL } from './helpers';
-
+import Swal from 'sweetalert2';
 
 const CrearProducto = () => {
 
@@ -9,15 +9,49 @@ const CrearProducto = () => {
     const [nombreProducto,setNombreProducto] = useState('');
     const [precio,setPrecio] = useState(0);
     const [imagen,setImagen] = useState('');
-    const [categoria,setCategoria] = useState('')
+    const [categoria,setCategoria] = useState('');
+    const [msjError,setMsjError] = useState(false);
+    // variable de entorno con la direccion de mi api
+    const URL = process.env.REACT_APP_API_CAFETERIA;
     
-    const handleSubmit = (e) =>{
+    const handleSubmit = async (e) =>{
         e.preventDefault();
         // validar los datos
         if(cantidadCaracteres(nombreProducto)&&validarPrecio(precio)&&validarURL(imagen)&&validarCategoria(categoria)){
-            console.log('los datos son correctos crear el objeto')
+            setMsjError(false);
+            const nuevoProducto = {
+                // nombreProducto: nombreProducto,
+                // si el state y las propiedades son iguales puuede ser
+                nombreProducto,
+                precio,
+                imagen,
+                categoria
+            }
+            console.log(nuevoProducto);
+            // enviar peticion a json-server (API) create
+            try{
+                const respuesta = await fetch(URL, {
+                    method: 'POST',
+                    headers: {
+                        "Content-Type":"application/json" 
+                    },
+                    body: JSON.stringify(nuevoProducto)
+                })
+                console.log(respuesta);
+                if(respuesta.status === 201){
+                    // mostrar mensaje que todo salio bien
+                    Swal.fire(
+                        'Producto creado!',
+                        'El producto fue agregado correctamente',
+                        'success'
+                    )                      
+                }
+            }catch(error){
+                // mostrar un mensaje al usuario
+                console.log(error);
+            }
         }else{
-            console.log('solicitar que se cargen los datos correctamente')
+            setMsjError(true);
         }
         // crear un objeto
         // enviar peticion a json-server(API) create
@@ -54,6 +88,9 @@ const CrearProducto = () => {
                     Guardar
                 </Button>
                 </Form>
+                {
+                    (msjError)?(<Alert variant='danger' className='mt-3'>This is a  alert—check it out!</Alert>):null
+                }
         </section>
     );
 };
