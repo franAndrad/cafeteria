@@ -10,5 +10,5 @@ $ npm start
 ```
 ## Ejecutar Simulacion API
 ```
-$ json-server --watch db.json --port 3005`
+$ json-server --watch db.json --port 3005
 ```
