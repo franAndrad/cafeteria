@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import { Form, Button } from 'react-bootstrap';
-import { cantidadCaracteres, validarPrecio, validarURL } from './helpers';
+import { cantidadCaracteres, validarCategoria, validarPrecio, validarURL } from './helpers';
 
 
 const CrearProducto = () => {
@@ -14,7 +14,7 @@ const CrearProducto = () => {
     const handleSubmit = (e) =>{
         e.preventDefault();
         // validar los datos
-        if(cantidadCaracteres(nombreProducto)&&validarPrecio(precio)&&validarURL(imagen)){
+        if(cantidadCaracteres(nombreProducto)&&validarPrecio(precio)&&validarURL(imagen)&&validarCategoria(categoria)){
             console.log('los datos son correctos crear el objeto')
         }else{
             console.log('solicitar que se cargen los datos correctamente')

@@ -17,7 +17,7 @@ export const validarPrecio = (dato) =>{
 
 export const validarURL = (input) =>{
     let expRegular = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
-    if(expRegular.test(input.value.trim())){
+    if(expRegular.test(input.trim())){
         return true;
     } else {
         return false;
