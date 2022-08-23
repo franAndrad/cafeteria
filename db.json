@@ -41,6 +41,13 @@
       "imagen": "https://www.istockphoto.com/es/foto/bizcochos-de-chocolate-apilados-con-taza-de-t%C3%A9-gm145994278-6078583",
       "categoria": "dulce",
       "id": 6
+    },
+    {
+      "nombreProducto": "pan",
+      "precio": "350",
+      "imagen": "https://www.istockphoto.com/es/foto/bizcochos-de-chocolate-apilados-con-taza-de-t%C3%A9-gm145994278-6078583",
+      "categoria": "salado",
+      "id": 7
     }
   ]
 }
