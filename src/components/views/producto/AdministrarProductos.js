@@ -14,7 +14,6 @@ const AdministrarProductos = () => {
     
     const consultarAPI = async () => {
         // peticion get
-        
         try{
             // codigo que quiero ejecutar
             const respuesta = await fetch(URL);
@@ -46,7 +45,7 @@ const AdministrarProductos = () => {
                 <tbody>
                     {/* Aqui tengo que hacer un map */}
                     {productos.map((producto)=>
-                    <ItemProducto key={producto.id} producto={producto}></ItemProducto>
+                    <ItemProducto key={producto.id} producto={producto} consultarAPI={consultarAPI}></ItemProducto>
                     )
                     }
                 </tbody>
