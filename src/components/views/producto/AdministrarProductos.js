@@ -1,4 +1,4 @@
-import React, {useState,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { Table, Button } from 'react-bootstrap';
 import ItemProducto from './ItemProducto';
 import { Link } from 'react-router-dom';
@@ -7,23 +7,23 @@ const AdministrarProductos = () => {
 
     const URL = process.env.REACT_APP_API_CAFETERIA;
     const [productos, setProductos] = useState([]);
-    
-    useEffect (()=>{
+
+    useEffect(() => {
         consultarAPI();
-    },[]);
-    
+    }, []);
+
     const consultarAPI = async () => {
         // peticion get
-        try{
+        try {
             // codigo que quiero ejecutar
             const respuesta = await fetch(URL);
             const listaProductos = await respuesta.json();
             setProductos(listaProductos);
-        }catch(error){
+        } catch (error) {
             console.log(error);
-        }   
+        }
     }
-    
+
     return (
         <section className='container'>
             <div className='d-flex justify-content-between align-items-center mt-5'>
@@ -44,8 +44,8 @@ const AdministrarProductos = () => {
                 </thead>
                 <tbody>
                     {/* Aqui tengo que hacer un map */}
-                    {productos.map((producto)=>
-                    <ItemProducto key={producto.id} producto={producto} consultarAPI={consultarAPI}></ItemProducto>
+                    {productos.map((producto) =>
+                        <ItemProducto key={producto.id} producto={producto} consultarAPI={consultarAPI}></ItemProducto>
                     )
                     }
                 </tbody>
