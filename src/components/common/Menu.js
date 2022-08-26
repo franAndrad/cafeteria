@@ -12,7 +12,6 @@ const Menu = () => {
                 <Nav className="me-auto">
                     <NavLink className='nav-item nav-link' end to='/'>Home</NavLink>
                     <NavLink className='nav-item nav-link' end to='/administrar'>Administrar</NavLink>
-                    <NavLink className='nav-item nav-link' end to='/administrar/crear'>Crear</NavLink>
                 </Nav>
             </Navbar.Collapse>
         </Container>
