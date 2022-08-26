@@ -13,7 +13,7 @@ const CardProducto = (props) => {
                         bulk of the card's content.
                     </Card.Text>
                     <div className='d-flex justify-content-around'>
-                        <h4>{props.producto.precio}</h4>
+                        <h4>${props.producto.precio}</h4>
                         <Button variant="primary">Ver mas</Button>
                     </div>
                 </Card.Body>
