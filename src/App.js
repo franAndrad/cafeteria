@@ -8,6 +8,7 @@ import Menu from './components/common/Menu'
 import Footer from './components/common/Footer'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './app.css'
+import VerMas from './components/views/VerMas';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route exact path='/administrar/crear' element={<CrearProducto></CrearProducto>}></Route>
           <Route exact path='/administrar/editar/:id' element={<EditarProducto></EditarProducto>}></Route>
           <Route exact path='*' element={<Error404></Error404>}></Route>
+          <Route exact path='/verMas/:id' element={<VerMas></VerMas>}></Route>
         </Routes>
         <Footer></Footer>
       </BrowserRouter>

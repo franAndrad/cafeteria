@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const CardProducto = (props) => {
     return (
@@ -14,7 +15,7 @@ const CardProducto = (props) => {
                     </Card.Text>
                     <div className='d-flex justify-content-around'>
                         <h4>${props.producto.precio}</h4>
-                        <Button variant="primary">Ver mas</Button>
+                        <Link to={`/verMas/${props.producto.id}`} className='btn btn-primary'>Ver mas</Link>
                     </div>
                 </Card.Body>
             </Card>
