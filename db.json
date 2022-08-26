@@ -3,21 +3,21 @@
     {
       "nombreProducto": "Medialuna",
       "precio": "100",
-      "imagen": "https://setupbits.com/es/como-desinstalar-wsl-en-windows-11",
+      "imagen": "https://images.pexels.com/photos/1157835/pexels-photo-1157835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "categoria": "dulce",
       "id": 3
     },
     {
       "nombreProducto": "licuado banana",
       "precio": "500",
-      "imagen": "https://www.istockphoto.com/es/foto/bizcochos-de-chocolate-apilados-con-taza-de-t%C3%A9-gm145994278-6078583",
+      "imagen": "https://images.pexels.com/photos/1157835/pexels-photo-1157835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "categoria": "bebida-fria",
       "id": 5
     },
     {
       "nombreProducto": "galletas",
       "precio": "400",
-      "imagen": "https://www.istockphoto.com/es/foto/bizcochos-de-chocolate-apilados-con-taza-de-t%C3%A9-gm145994278-6078583",
+      "imagen": "https://images.pexels.com/photos/1157835/pexels-photo-1157835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "categoria": "dulce",
       "id": 6
     }
