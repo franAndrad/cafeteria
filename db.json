@@ -20,13 +20,6 @@
       "imagen": "https://www.istockphoto.com/es/foto/bizcochos-de-chocolate-apilados-con-taza-de-t%C3%A9-gm145994278-6078583",
       "categoria": "dulce",
       "id": 6
-    },
-    {
-      "nombreProducto": "brownie",
-      "precio": "333",
-      "imagen": "https://www.pexels.com/es-es/foto/foto-de-un-par-de-zapatillas-vans-1598508/",
-      "categoria": "dulce",
-      "id": 7
     }
   ]
 }

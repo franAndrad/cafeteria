@@ -1,10 +1,13 @@
 import React from 'react';
+import CardProducto from './producto/CardProducto';
 
 const Home = () => {
     return (
-        <div>
+        <section className='container mt-3'>
             <h1>Pagina Principal</h1>
-        </div>
+            <hr />
+            <CardProducto></CardProducto>
+        </section>
     );
 };
 
