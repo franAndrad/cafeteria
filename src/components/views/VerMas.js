@@ -15,7 +15,7 @@ const VerMas = () => {
         try {
             const respuesta = await fetch(URL);
             const listaProductos = await respuesta.json();
-            const encontrado = listaProductos.find(elemento => elemento.id === parseInt(id) );
+            const encontrado = listaProductos.find(elemento => elemento._id === id );
             setProducto(encontrado);
         } catch (error) {
             console.log(error);

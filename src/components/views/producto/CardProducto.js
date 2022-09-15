@@ -15,7 +15,7 @@ const CardProducto = (props) => {
                     </Card.Text>
                     <div className='d-flex justify-content-around'>
                         <h4>${props.producto.precio}</h4>
-                        <Link to={`/verMas/${props.producto.id}`} className='btn btn-primary'>Ver mas</Link>
+                        <Link to={`/verMas/${props.producto._id}`} className='btn btn-primary'>Ver mas</Link>
                     </div>
                 </Card.Body>
             </Card>

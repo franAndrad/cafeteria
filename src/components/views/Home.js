@@ -26,8 +26,8 @@ const Home = () => {
             <hr />
             <div className='row my-4'>
             {
-                productos.map((producto, key) =>
-                <CardProducto key={key} producto={producto}></CardProducto>
+                productos.map((producto) =>
+                <CardProducto key={producto._id} producto={producto}></CardProducto>
                 )
             }
             </div>
