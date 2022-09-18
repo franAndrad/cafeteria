@@ -92,7 +92,7 @@ const CrearProducto = () => {
                 </Button>
                 </Form>
                 {
-                    (msjError)?(<Alert variant='danger' className='mt-3'>This is a  alert—check it out!</Alert>):null
+                    (msjError)?(<Alert variant='danger' className='mt-3'>El producto no pudo ser creado!</Alert>):null
                 }
         </section>
     );
