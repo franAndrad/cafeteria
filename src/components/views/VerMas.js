@@ -3,7 +3,7 @@ import { Card } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 
 const VerMas = () => {
-    const [producto, setProducto] = useState('');
+    const [producto, setProducto] = useState({});
     const URL = process.env.REACT_APP_API_CAFETERIA;
     const { id } = useParams();
 

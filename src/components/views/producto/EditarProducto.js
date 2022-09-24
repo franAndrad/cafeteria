@@ -47,7 +47,8 @@ const EditarProducto = () => {
                 const resp = await fetch(URL + '/' + id, {
                     method: 'PUT',
                     headers: {
-                        "Content-Type": "application/json"
+                        "Content-Type": "application/json",
+                        "x-token": JSON.parse(localStorage.getItem('tokenCafe')).token
                     },
                     body: JSON.stringify(productoEditar)
                 });
